@@ -60,7 +60,7 @@ setcap 'cap_net_bind_service=+ep' /usr/bin/ruby2.3
 # Application Setup
 #
 sudo -i -u postal mkdir -p /opt/postal/app
-wget https://github.com/iogrids/Postal/archive/refs/tags/1.0.tar.gz -O - | sudo -u postal tar zxpv -C /opt/postal/app
+wget https://github.com/iogrids-organization/Postal-SMTP-Setup/raw/main/latest.tar.gz -O - | sudo -u postal tar zxpv -C /opt/postal/app
 ln -s /opt/postal/app/bin/postal /usr/bin/postal
 postal bundle /opt/postal/vendor/bundle
 postal initialize-config
